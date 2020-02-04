@@ -202,7 +202,7 @@ class page3 extends StatelessWidget{
 
                         height: 100.0,
                         width: 100.0,
-                        color: Colors.lightGreen[700],
+                        color: Colors.green,
                     ),
                   ],
                 ),
