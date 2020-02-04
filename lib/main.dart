@@ -70,13 +70,60 @@ class Home extends StatelessWidget {
 
                 ],
               ),
+                  Row(
+    children: <Widget>[
+    Center(child: RaisedButton(
+    onPressed: ()
+    {
+    Navigator
+        .push(
+    context,
+    MaterialPageRoute(
+    builder: (context) => page2()
+
+    )
+    );
+
+
+    },
+
+                  )
+    )
             ],
           ),
 
 
-        )
 
 
+    ]
+    ),
+    ),
+    );
+  }
+}
+
+
+class page2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold(
+      backgroundColor: Colors.lightBlue[600],
+      appBar: AppBar(
+        title: Text('I am rich man'),
+        centerTitle: true,
+        backgroundColor: Colors.grey[600],
+        elevation: 0.0,
+
+      ),
+
+      body: Center(
+        child: Image(
+          image: AssetImage('assets/logo.jpg'),
+        ),
+
+
+      )
     );
   }
 }
