@@ -86,12 +86,35 @@ class Home extends StatelessWidget {
 
 
     },
+      child: Text('Challenge 1'),
 
                   )
     )
             ],
           ),
 
+              Row(
+                children: <Widget>[
+                  Center(child: RaisedButton(
+                    onPressed: ()
+                    {
+                      Navigator
+                          .push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => page3()
+
+                          )
+                      );
+
+
+                    },
+                    child: Text('Challenge 2'),
+
+                  )
+                  )
+                ],
+              ),
 
 
 
@@ -110,7 +133,7 @@ class page2 extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.lightBlue[600],
       appBar: AppBar(
-        title: Text('I am rich man'),
+        title: Text('I am poor man'),
         centerTitle: true,
         backgroundColor: Colors.grey[600],
         elevation: 0.0,
@@ -118,12 +141,90 @@ class page2 extends StatelessWidget{
       ),
 
       body: Center(
+
         child: Image(
-          image: AssetImage('assets/logo.jpg'),
+          image: AssetImage('assets/poor.jpg'),
         ),
 
 
-      )
+
+
+      ),
+
+
+
+
+    );
+  }
+}
+
+
+class page3 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context)
+  {
+    return MaterialApp(
+      home: Scaffold
+        (
+        backgroundColor: Colors.teal,
+        appBar: AppBar(
+          title: Text('Layouts'),
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          elevation: 0.0,
+
+        ),
+        body: SafeArea
+          (
+          child: Row
+            (
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+
+                width: 100.0,
+                color: Colors.red,
+
+              ),
+
+              Container
+                (
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.yellow,
+                    ),
+                    Container(
+
+                        height: 100.0,
+                        width: 100.0,
+                        color: Colors.lightGreen[700],
+                    ),
+                  ],
+                ),
+
+              ),
+              Container
+                (
+                width: 100.0,
+                color: Colors.blue,
+              )
+
+
+
+
+
+
+            ],
+
+
+        ),
+        ),
+      ),
     );
   }
 }
