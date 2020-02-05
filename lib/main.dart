@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -70,28 +71,30 @@ class Home extends StatelessWidget {
 
                 ],
               ),
-                  Row(
-    children: <Widget>[
-    Center(child: RaisedButton(
-    onPressed: ()
-    {
-    Navigator
-        .push(
-    context,
-    MaterialPageRoute(
-    builder: (context) => page2()
 
-    )
-    );
+              Row(
+                children: <Widget>[
+                  Center(child: RaisedButton(
+                    onPressed: ()
+                    {
+                      Navigator
+                          .push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => page2()
+
+                          )
+                      );
 
 
-    },
-      child: Text('Challenge 1'),
+                    },
+                    child: Text('Challenge 1'),
 
                   )
-    )
-            ],
-          ),
+                  )
+                ],
+              ),
+
 
               Row(
                 children: <Widget>[
@@ -116,9 +119,33 @@ class Home extends StatelessWidget {
                 ],
               ),
 
+              Row(
+                children: <Widget>[
+                  Center(child: RaisedButton(
+                    onPressed: ()
+                    {
+                      Navigator
+                          .push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => page4()
+
+                          )
+                      );
 
 
-    ]
+                    },
+                    child: Text('Challenge 3'),
+
+                  )
+                  )
+                ],
+              ),
+
+
+
+
+            ]
     ),
     ),
     );
@@ -228,5 +255,120 @@ class page3 extends StatelessWidget{
     );
   }
 }
+
+
+class page4 extends StatelessWidget
+{
+  @override
+  Widget build(BuildContext context)
+  {
+    return MaterialApp(
+        home: Scaffold
+    (
+    backgroundColor: Colors.blue,
+        body: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar
+                  (
+                  radius:50.0,
+                  backgroundImage: AssetImage('assets/mi.png'),
+
+
+                ),
+                Text
+                  (
+                  'Mumbai Indians',
+                style: TextStyle
+                  (
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                  fontFamily: 'Lobster',
+                  color: Colors.white,
+
+                ),
+                ),
+                Text
+                  (
+                  'Indian Premier League',
+                      style: TextStyle
+                      (
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      letterSpacing: 2.0,
+                      fontFamily: 'PatuaOne',
+                      color: Colors.yellowAccent,
+                    ),
+                ),
+
+                Container
+                  (
+                  padding: EdgeInsets.all(10.0),
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                  child: Row
+                    (
+                    children: <Widget>[
+                      Icon(
+                        Icons.room,
+                        color: Colors.black,
+                      ),
+                      Text
+                        (
+                        'Mumbai wanhade stadium,India',
+                        style: TextStyle
+                          (
+                          fontWeight: FontWeight.bold,
+                          //fontSize: 20.0,
+                          letterSpacing: 1.0,
+                          fontFamily: 'PatuaOne',
+                          color: Colors.black45,
+                        ),
+
+                      )
+                    ],
+                  ),
+                ),
+
+
+                Container
+                  (
+                  padding: EdgeInsets.all(10.0),
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                  child: Row
+                    (
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        color: Colors.black,
+                      ),
+                      Text
+                        (
+                        'mumbaiindians@gmail.com',
+                        style: TextStyle
+                          (
+                          fontWeight: FontWeight.bold,
+                          //fontSize: 20.0,
+                          letterSpacing: 1.0,
+                          fontFamily: 'PatuaOne',
+                          color: Colors.black45,
+                        ),
+
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )
+        )
+
+
+
+        ),
+    );
+    }
+} 
 
 
