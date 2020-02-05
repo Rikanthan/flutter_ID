@@ -301,64 +301,67 @@ class page4 extends StatelessWidget
                       color: Colors.yellowAccent,
                     ),
                 ),
-
-                Container
+                SizedBox
                   (
-                  padding: EdgeInsets.all(10.0),
-                  color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
-                  child: Row
-                    (
-                    children: <Widget>[
-                      Icon(
-                        Icons.room,
-                        color: Colors.black,
-                      ),
-                      Text
-                        (
-                        'Mumbai wanhade stadium,India',
-                        style: TextStyle
-                          (
-                          fontWeight: FontWeight.bold,
-                          //fontSize: 20.0,
-                          letterSpacing: 1.0,
-                          fontFamily: 'PatuaOne',
-                          color: Colors.black45,
-                        ),
-
-                      )
-                    ],
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.blue.shade200,
                   ),
                 ),
 
-
-                Container
+                Card
                   (
-                  padding: EdgeInsets.all(10.0),
+
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
-                  child: Row
+                  child: ListTile
                     (
-                    children: <Widget>[
-                      Icon(
-                        Icons.email,
-                        color: Colors.black,
-                      ),
-                      Text
-                        (
-                        'mumbaiindians@gmail.com',
-                        style: TextStyle
-                          (
-                          fontWeight: FontWeight.bold,
-                          //fontSize: 20.0,
-                          letterSpacing: 1.0,
-                          fontFamily: 'PatuaOne',
-                          color: Colors.black45,
-                        ),
+                    leading:Icon(
+                      Icons.room,
+                      color: Colors.black,
+                    ),
+                    title:Text
+                    (
+                    'Mumbai wanhade stadium,India',
+                    style: TextStyle
+                      (
+                      fontWeight: FontWeight.bold,
+//fontSize: 20.0,
+                      letterSpacing: 1.0,
+                      fontFamily: 'PatuaOne',
+                      color: Colors.black45,
+                    ),
 
-                      )
-                    ],
                   ),
+                  )
+                ),
+
+
+                Card
+                  (
+
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                  child:ListTile(
+                    leading:Icon(
+                      Icons.email,
+                      color: Colors.black,
+                    ),
+                    title:Text
+                      (
+                      'mumbaiindians@gmail.com',
+                      style: TextStyle
+                        (
+                        fontWeight: FontWeight.bold,
+//fontSize: 20.0,
+                        letterSpacing: 1.0,
+                        fontFamily: 'PatuaOne',
+                        color: Colors.black45,
+                      ),
+
+                    )
+                  )
                 )
               ],
             )
@@ -368,7 +371,13 @@ class page4 extends StatelessWidget
 
         ),
     );
+
+
     }
-} 
+}
+
+
+
+
 
 
